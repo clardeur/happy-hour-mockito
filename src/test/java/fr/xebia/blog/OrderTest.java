@@ -23,8 +23,8 @@ public class OrderTest {
 
     @Test
     public void should_get_order_total_price() throws Exception {
-        when(product1.getPrice()).thenReturn(new BigDecimal("3.99")).getMock();
-        when(product2.getPrice()).thenReturn(new BigDecimal("5.00")).getMock();
+        when(product1.getPrice()).thenReturn(new BigDecimal("3.99"));
+        when(product2.getPrice()).thenReturn(new BigDecimal("5.00"));
         Order order = new Order(newArrayList(product1, product2));
         assertThat(order.getTotalPrice()).isEqualTo(new BigDecimal("8.99"));
     }
