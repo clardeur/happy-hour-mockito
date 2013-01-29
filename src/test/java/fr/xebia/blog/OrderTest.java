@@ -32,11 +32,10 @@ public class OrderTest {
 
     @Test
     public void should_have_a_total_price_equals_to_20() throws Exception {
-        Order order = new Order(newArrayList(product1, product2));
+        Order order = new Order(newArrayList(product1));
         given(product1.getPrice()).willReturn(BigDecimal.TEN); // GIVEN
-        given(product2.getPrice()).willReturn(BigDecimal.TEN);
         BigDecimal totalPrice = order.getTotalPrice();         // WHEN
-        assertThat(totalPrice).isEqualTo(new BigDecimal(20));  // THEN
+        assertThat(totalPrice).isEqualTo(BigDecimal.TEN);      // THEN
     }
 
     @Test
