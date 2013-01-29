@@ -39,7 +39,7 @@ public class OrderTest {
     }
 
     @Test
-    public void should_format_total_price_to_10_00_€_string() throws Exception {
+    public void should_format_total_price_to_10_00_euros_string() throws Exception {
         Order order = spy(new Order(null));
         doReturn(BigDecimal.TEN).when(order).getTotalPrice();
         assertThat(order.formatTotalPrice(Locale.FRANCE)).isEqualTo("10,00 €");
