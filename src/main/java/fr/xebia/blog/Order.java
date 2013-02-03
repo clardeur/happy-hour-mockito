@@ -13,7 +13,7 @@ import static org.apache.commons.lang.StringUtils.EMPTY;
  */
 public class Order {
 
-    private List<Product> products;
+    List<Product> products;
 
     public Order(List<Product> products) {
         this.products = products != null ? products : new ArrayList<Product>();
